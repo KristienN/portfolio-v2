@@ -1,8 +1,10 @@
 # unconventional files
 /blueprints/*/files/
+tailwind-input.css
 
 # compiled output
 /dist/
+/public/assets/css/tailwind.css
 
 # addons
 /.node_modules.ember-try/
