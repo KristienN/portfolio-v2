@@ -27,7 +27,8 @@ jobs:
           cache: npm
       - name: Setup Yarn v2 (Berry)
         run: |
-          npm install -g yarn
+          node -v
+          npm install --global yarn
           yarn set version berry
       - name: Install Dependencies
         run: yarn install
