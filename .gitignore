@@ -29,7 +29,6 @@
 .idea
 
 # Yarn v2
-.yarn/
 .pnp.cjs
 .pnp.loader.mjs
 .yarn-debug.log*
