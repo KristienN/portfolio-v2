@@ -1,5 +1,6 @@
 # compiled output
 /dist/
+/tmp/
 /declarations/
 /public/assets/css/tailwind.css
 
@@ -27,3 +28,9 @@
 
 .idea
 
+# Yarn v2
+.yarn/
+.pnp.cjs
+.pnp.loader.mjs
+.yarn-debug.log*
+.yarn-error.log*
