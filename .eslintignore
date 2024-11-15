@@ -4,6 +4,7 @@
 # compiled output
 /declarations/
 /dist/
+/public/assets/css/tailwind.css
 
 # misc
 /coverage/

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Lovelace;
+  src: url("/assets/font/Lovelace-Regular.otf");
+}
+
+/* Custom font usage */
+.font-lovelace {
+  font-family: Lovelace, sans-serif;
+}

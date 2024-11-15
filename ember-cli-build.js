@@ -7,6 +7,11 @@ module.exports = function (defaults) {
     'ember-cli-babel': { enableTypeScriptTransform: true },
 
     // Add options here
+    postcssOptions: {
+      compile: {
+        plugins: [require('tailwindcss')],
+      },
+    },
   });
 
   return app.toTree();
