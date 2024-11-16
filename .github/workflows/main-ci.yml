@@ -12,7 +12,6 @@ jobs:
     timeout-minutes: 30
     env:
       REGISTRY_NAME: registry.digitalocean.com/kristien-docr
-    needs: [ build ]
 
     steps:
       - uses: actions/checkout@v4
