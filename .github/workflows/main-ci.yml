@@ -16,19 +16,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install doctl
+      - name: setup doctl
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
-      - name: Log in to DOCR
+      - name: docr login
         run: doctl registry login --expiry-seconds 1200
 
-      - name: Build image
+      - name: build
         run: docker build -t portfolio-v2 .
 
-      - name: Tag image
-        run: docker tag docker tag portfolio-v2 $REGISTRY_NAME/portfolio-v2:$(echo $GITHUB_SHA | head -c7)
+      - name: tag
+        run: docker tag portfolio-v2 $REGISTRY_NAME/portfolio-v2:$(echo $GITHUB_SHA | head -c7)
 
-      - name: Push to DOCR
+      - name: push
         run: docker push $REGISTRY_NAME/portfolio-v2:$(echo $GITHUB_SHA | head -c7)
