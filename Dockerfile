@@ -2,7 +2,10 @@ FROM node:22.9-alpine AS builder
 
 WORKDIR /app
 
+RUN yarn set version berry
+
 COPY package.json yarn.lock ./
+
 RUN yarn install
 
 COPY . ./
