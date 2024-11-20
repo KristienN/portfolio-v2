@@ -3,11 +3,11 @@ import { setupRenderingTest } from 'my-typescript-app/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | frameworks', function (hooks) {
+module('Integration | Component | extras', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`<Frameworks />`);
-    assert.dom().containsText("I'm Not Afraid of Frameworks");
+    await render(hbs`<Extras />`);
+    assert.dom().containsText('More Than Just Frontend & Backend...');
   });
 });

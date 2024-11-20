@@ -1,0 +1,13 @@
+<div class="min-h-screen max-w-screen flex flex-col m-4 p-12 items-center justify-center font-lovelace">
+  <div class="flex w-full justify-between">
+    {{#each (slice 0 4 this.tools) as |t|}}
+      <img src={{t.imgSrc}} alt={{t.name}} class="shadow-md rounded-full border h-48 w-48">
+    {{/each}}
+  </div>
+  <p class="text-5xl text-center my-12 p-6">More Than Just Frontend & Backend...</p>
+  <div class="flex w-full justify-between">
+    {{#each (slice 4 8 this.tools) as |t|}}
+      <img src={{t.imgSrc}} alt={{t.name}} class="shadow-md rounded-full border h-48 w-48">
+    {{/each}}
+  </div>
+</div>
