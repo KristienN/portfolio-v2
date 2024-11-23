@@ -5,6 +5,7 @@ interface FrameworkSignature {}
 interface IFramework {
   name: string;
   imgSrc: string;
+  link: string;
 }
 
 interface IFrameworks {
@@ -16,30 +17,36 @@ export default class Frameworks extends Component<FrameworkSignature> {
   frameworks: IFrameworks = {
     backend: [
       {
-        name: 'fastify',
+        name: 'Fastify',
         imgSrc: '/assets/img/fastify.png',
+        link: 'https://fastify.dev/',
       },
       {
-        name: 'springboot',
+        name: 'Spring',
         imgSrc: '/assets/img/springboot.png',
+        link: 'https://spring.io/',
       },
       {
-        name: 'express',
+        name: 'Express',
         imgSrc: '/assets/img/express.png',
+        link: 'https://expressjs.com/',
       },
     ],
     frontend: [
       {
-        name: 'react',
+        name: 'React',
         imgSrc: '/assets/img/react.png',
+        link: 'https://react.dev',
       },
       {
-        name: 'angularjs',
+        name: 'AngularJS',
         imgSrc: '/assets/img/angularjs.png',
+        link: 'https://angularjs.org/',
       },
       {
-        name: 'emberjs',
+        name: 'EmberJS',
         imgSrc: '/assets/img/emberjs.png',
+        link: 'https://angularjs.org/',
       },
     ],
   };
