@@ -2,9 +2,11 @@
   <p class="text-7xl mb-10 text-center">Career Highlights</p>
   <div class="flex flex-row justify-center h-auto w-full mt-5">
     {{#each this.highlights as |highlight|  }}
-      <div class="flex flex-col items-center w-[36rem]">
+      <div {{did-insert this.fadeInRight}} id="hlt"
+                                           class="flex flex-col items-center w-[36rem] opacity-0 -translate-x-96">
         <div>
-          <div class="bg-white shadow-2xl rounded w-96 p-6">
+          <div
+            class=" group/hlt border-2 bg-white shadow-2xl rounded w-96 p-6 hover:scale-110 hover:border-yellow-200 ease-in-out">
             <div class="flex justify-between items-center">
               <p class="font-bold text-2xl">{{highlight.company}}</p>
               <img src={{highlight.logoSrc}} alt="yahoo" class="h-10 w-10">
