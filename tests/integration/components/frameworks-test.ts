@@ -8,7 +8,7 @@ module('Integration | Component | frameworks', function (hooks) {
 
   test('it renders', async function (assert) {
     await render(hbs`<Frameworks />`);
-
+    assert.dom().containsText("I'm Not Afraid of Frameworks");
     const testCases: string[] = [
       'React',
       'AngularJS',
