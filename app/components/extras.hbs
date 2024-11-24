@@ -15,23 +15,26 @@
             </div>
 
           {{/if}}
-          <div class="group cursor-pointer w-72 h-auto shadow-lg rounded-lg border {{if (eq job.status 'success')
-                                                                                        'border-green-500'
-                                                                                        'border-blue-500'}} p-5 hover:bg-gray-200" {{on
+          <div
+            class="transition-all ease-in-out hover:scale-110 duration-300 group cursor-pointer w-72 h-auto  rounded-lg border {{if
+              (eq job.name this.selectedJob.name)'scale-105 border-yellow-300 shadow-sm' 'shadow-lg'}} {{if
+              (eq job.status 'success')
+              'hover:border-green-500'
+              'hover:border-blue-500'}} p-5" {{on
             "click"
             (fn this.setSelectedJob job)}}>
             <div class="flex justify-between items-center mb-2">
               <div class="flex items-center">
                 {{#if (eq job.status 'success')}}
-                  <img src="/assets/img/{{job.status}}.png" alt="" class="w-8 h-8 rounded-full border mr-1">
+                  <img src="/assets/img/{{job.status}}.png" alt="" class="w-6 h-6 rounded-full border mr-1">
                 {{/if}}
                 {{#if (eq job.status 'in-progress')}}
-                  <img src="/assets/img/{{job.status}}.gif" alt="" class="w-8 h-8 rounded-full border mr-5">
+                  <img src="/assets/img/{{job.status}}.gif" alt="" class="w-6 h-6 rounded-full border mr-5">
                 {{/if}}
                 <p class="text-lg font-bold">{{job.name}}</p>
               </div>
               <div
-                class="h-8 w-15 flex rounded-full p-3 border font-bold justify-center items-center text-center text-blue-600 group-hover:bg-blue-500 group-hover:text-white text-md">
+                class="transition-all ease-in-out duration-300 h-8 w-15 flex rounded-full p-3 border font-bold justify-center items-center text-center text-blue-600 group-hover:bg-blue-500 group-hover:text-white text-md">
                 {{if (eq  job.duration 'dynamic') this.dynamicDuration job.duration}}
               </div>
             </div>

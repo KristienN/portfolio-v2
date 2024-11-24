@@ -1,4 +1,5 @@
 import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
 interface Highlight {
   company: string;
@@ -15,7 +16,7 @@ export default class HighlightsComponent extends Component<HighlightsSignature> 
   highlights: Highlight[] = [
     {
       company: 'Yahoo Inc',
-      title: 'Software Developer Intern',
+      title: 'Software Developer Internship',
       description:
         'During this internship, I contributed to a centralized authorization system using AngularJS and Spring Boot, with Redis and Elastisearch optimizing performance. This strengthened my full-stack development skills and collaborative problem-solving.',
       logoSrc: '/assets/img/yahoo-inc.png',
@@ -41,4 +42,18 @@ export default class HighlightsComponent extends Component<HighlightsSignature> 
       locations: 'Dublin, IRL | London, UK',
     },
   ];
+
+  @action
+  fadeInRight(element) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(`yes`);
+          entry.target.classList.add('fade-in-right');
+        }
+      });
+    });
+
+    observer.observe(element);
+  }
 }

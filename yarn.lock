@@ -1569,6 +1569,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ember/render-modifiers@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@ember/render-modifiers@npm:2.1.0"
+  dependencies:
+    "@embroider/macros": "npm:^1.0.0"
+    ember-cli-babel: "npm:^7.26.11"
+    ember-modifier-manager-polyfill: "npm:^1.2.0"
+  peerDependencies:
+    "@glint/template": ^1.0.2
+    ember-source: ^3.8 || ^4.0.0 || ^5.0.0
+  peerDependenciesMeta:
+    "@glint/template":
+      optional: true
+  checksum: 10c0/9e8500808a085048d6a7be72f5d17f81e1644fca07ea86b93140d2834a9b9257da5f7265ab93c7a75db8abfc4df847eaf74405a3ee36f95105942b3598c3c3e5
+  languageName: node
+  linkType: hard
+
 "@ember/string@npm:^4.0.0":
   version: 4.0.0
   resolution: "@ember/string@npm:4.0.0"
@@ -6031,7 +6048,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-babel@npm:^7.13.0, ember-cli-babel@npm:^7.23.0, ember-cli-babel@npm:^7.23.1, ember-cli-babel@npm:^7.26.11, ember-cli-babel@npm:^7.26.3, ember-cli-babel@npm:^7.26.6, ember-cli-babel@npm:^7.7.3":
+"ember-cli-babel@npm:^7.10.0, ember-cli-babel@npm:^7.13.0, ember-cli-babel@npm:^7.23.0, ember-cli-babel@npm:^7.23.1, ember-cli-babel@npm:^7.26.11, ember-cli-babel@npm:^7.26.3, ember-cli-babel@npm:^7.26.6, ember-cli-babel@npm:^7.7.3":
   version: 7.26.11
   resolution: "ember-cli-babel@npm:7.26.11"
   dependencies:
@@ -6376,6 +6393,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ember-cli-version-checker@npm:^2.1.2":
+  version: 2.2.0
+  resolution: "ember-cli-version-checker@npm:2.2.0"
+  dependencies:
+    resolve: "npm:^1.3.3"
+    semver: "npm:^5.3.0"
+  checksum: 10c0/7dc41e9b3d1392dba2d3cce176b16072ce60a5c218bd6a764aad817e93928621440b657042ea73edb4fff633c7bd179021b79545980943a62cfaf6dafb5b63f4
+  languageName: node
+  linkType: hard
+
 "ember-cli-version-checker@npm:^3.1.3":
   version: 3.1.3
   resolution: "ember-cli-version-checker@npm:3.1.3"
@@ -6502,7 +6529,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-compatibility-helpers@npm:^1.1.2":
+"ember-compatibility-helpers@npm:^1.1.2, ember-compatibility-helpers@npm:^1.2.0":
   version: 1.2.7
   resolution: "ember-compatibility-helpers@npm:1.2.7"
   dependencies:
@@ -6610,6 +6637,17 @@ __metadata:
     ember-cli-babel: "npm:^7.13.0"
     ember-cli-typescript: "npm:^2.0.2"
   checksum: 10c0/04b41674ef4d3104e75f38c336cd727c0712eb7d27879a4efa82b751fcf758a6a11d286e5ebe042f9b97e034c0dcc53f21fb15b9f296b5d7b48221e64d054a5b
+  languageName: node
+  linkType: hard
+
+"ember-modifier-manager-polyfill@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "ember-modifier-manager-polyfill@npm:1.2.0"
+  dependencies:
+    ember-cli-babel: "npm:^7.10.0"
+    ember-cli-version-checker: "npm:^2.1.2"
+    ember-compatibility-helpers: "npm:^1.2.0"
+  checksum: 10c0/2ab5fc02ae1799f48685485f24cd8e21bf7eee0f14479eb775d590dca6becf34bbfdd2d7a6617d3c9b7dc405b50885b5624d79a29c0df217edf29fa4229ca365
   languageName: node
   linkType: hard
 
@@ -8089,6 +8127,26 @@ __metadata:
   dependencies:
     map-cache: "npm:^0.2.2"
   checksum: 10c0/5891d1c1d1d5e1a7fb3ccf28515c06731476fa88f7a50f4ede8a0d8d239a338448e7f7cc8b73db48da19c229fa30066104fe6489862065a4f1ed591c42fbeabf
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:^11.11.17":
+  version: 11.11.17
+  resolution: "framer-motion@npm:11.11.17"
+  dependencies:
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/4ec88a568e636c5409a238668770a7d0237270b4b58fdf27d0cab1f9094a4fdd22d25d827a1bba51e52f01e9d2db65544b32a5feb8eff9a63c8798f2e64677d0
   languageName: node
   linkType: hard
 
@@ -10926,6 +10984,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"motion@npm:^11.11.17":
+  version: 11.11.17
+  resolution: "motion@npm:11.11.17"
+  dependencies:
+    framer-motion: "npm:^11.11.17"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/4649b8746fbafb2869e2bb256e37658fe811d13cbbc8c0644964fdbcf257f4eb06cd1ad30e9084e0842a6c1720804caf69ac6110952423c842bc0d2f16c6b5b8
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -10977,6 +11056,7 @@ __metadata:
     "@babel/core": "npm:^7.25.2"
     "@ember-data/model": "npm:^5.3.9"
     "@ember/optional-features": "npm:^2.1.0"
+    "@ember/render-modifiers": "npm:^2.1.0"
     "@ember/string": "npm:^4.0.0"
     "@ember/test-helpers": "npm:^3.3.1"
     "@glimmer/component": "npm:^1.1.2"
@@ -11046,6 +11126,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.2.1"
     eslint-plugin-qunit: "npm:^8.1.2"
     loader.js: "npm:^4.7.0"
+    motion: "npm:^11.11.17"
     postcss: "npm:^8.4.49"
     prettier: "npm:^3.3.3"
     qunit: "npm:^2.22.0"
@@ -12669,7 +12750,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.1.7, resolve@npm:^1.10.0, resolve@npm:^1.11.1, resolve@npm:^1.13.1, resolve@npm:^1.14.2, resolve@npm:^1.17.0, resolve@npm:^1.20.0, resolve@npm:^1.22.0, resolve@npm:^1.22.1, resolve@npm:^1.22.2, resolve@npm:^1.22.3, resolve@npm:^1.22.8, resolve@npm:^1.4.0, resolve@npm:^1.5.0":
+"resolve@npm:^1.1.7, resolve@npm:^1.10.0, resolve@npm:^1.11.1, resolve@npm:^1.13.1, resolve@npm:^1.14.2, resolve@npm:^1.17.0, resolve@npm:^1.20.0, resolve@npm:^1.22.0, resolve@npm:^1.22.1, resolve@npm:^1.22.2, resolve@npm:^1.22.3, resolve@npm:^1.22.8, resolve@npm:^1.3.3, resolve@npm:^1.4.0, resolve@npm:^1.5.0":
   version: 1.22.8
   resolution: "resolve@npm:1.22.8"
   dependencies:
@@ -12682,7 +12763,8 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.1.7#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.11.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.13.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.17.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.3#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.8#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.4.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.5.0#optional!builtin<compat/resolve>":
+? "resolve@patch:resolve@npm%3A^1.1.7#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.11.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.13.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.17.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.3#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.8#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.3.3#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.4.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.5.0#optional!builtin<compat/resolve>"
+:
   version: 1.22.8
   resolution: "resolve@patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"
   dependencies:
@@ -14399,7 +14481,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.1, tslib@npm:^2.6.2":
+"tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.4.1, tslib@npm:^2.6.2":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
