@@ -9,19 +9,40 @@
     <div class="flex justify-center items center">
       {{#each this.frameworks.frontend as |f|}}
         <div
-          class="m-2 h-56 w-72 shadow-md border bg-white rounded-lg hover:opacity-25 flex justify-center items-center">
-          <img src={{f.imgSrc}} alt={{f.name}} class="rounded-lg object-contain">
+          class="group/items m-2 h-56 w-72 relative shadow-md border bg-white rounded-lg flex justify-center items-center">
+          <div class="h-full w-full group-hover/items:opacity-10 hover:bg-gray-200 flex justify-center items-center">
+            <img src={{f.imgSrc}}
+                 alt={{f.name}}
+                 class="rounded-lg object-contain">
+          </div>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="{{f.link}}"
+            class="invisible group-hover/items:visible group-hover/items:opacity-100 absolute w-full h-full font-bold justify-center items-center text-xl text-center py-10 top-12">
+            {{f.name}}
+          </a>
         </div>
-
       {{/each}}
     </div>
     <div class="flex justify-center items center mt-4">
       {{#each this.frameworks.backend as |f|}}
         <div
-          class="m-2 h-56 w-72 shadow-md border bg-white rounded-lg hover:opacity-25 flex justify-center items-center">
-          <img src={{f.imgSrc}} alt={{f.name}} class="rounded-lg object-contain" />
+          class="group/items m-2 h-56 w-72 relative shadow-md border bg-white rounded-lg flex justify-center items-center">
+          <div class="h-full w-full group-hover/items:opacity-10 hover:bg-gray-200 flex justify-center items-center">
+            <img src={{f.imgSrc}}
+                 alt={{f.name}}
+                 class="rounded-lg object-contain">
+          </div>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="{{f.link}}"
+            class="invisible group-hover/items:visible group-hover/items:opacity-100 absolute w-full h-full font-bold justify-center items-center text-xl text-center py-10 top-12">
+            {{f.name}}
+          </a>
         </div>
       {{/each}}
     </div>
   </div>
-</div>
+ </div>
