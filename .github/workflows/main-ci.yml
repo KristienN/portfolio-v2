@@ -28,7 +28,7 @@ jobs:
         run: docker build -t portfolio-v2 .
 
       - name: tag
-        run: docker tag portfolio-v2 $REGISTRY_NAME/portfolio-v2:$(echo $GITHUB_SHA | head -c7)
+        run: docker tag portfolio-v2 $REGISTRY_NAME/portfolio-v2:latest
 
       - name: push
-        run: docker push $REGISTRY_NAME/portfolio-v2:$(echo $GITHUB_SHA | head -c7)
+        run: docker push $REGISTRY_NAME/portfolio-v2:latest

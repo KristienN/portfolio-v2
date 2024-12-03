@@ -7,6 +7,7 @@ module.exports = {
       options: {
         singleQuote: true,
         trailingComma: 'all',
+        endOfLine: 'auto',
       },
     },
   ],

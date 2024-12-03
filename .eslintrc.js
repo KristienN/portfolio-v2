@@ -15,7 +15,9 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: {},
+  rules: {
+    'linebreak-style': 'off',
+  },
   overrides: [
     // ts files
     {

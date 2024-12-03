@@ -44,7 +44,7 @@ export default class HighlightsComponent extends Component<HighlightsSignature> 
   ];
 
   @action
-  fadeInRight(element) {
+  fadeInRight(element: Element) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
