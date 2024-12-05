@@ -1,35 +1,33 @@
-# compiled output
-/dist/
-/tmp/
-/declarations/
-/public/assets/css/tailwind.css
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# dependencies
-/node_modules/
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
 
-# misc
-/.env*
-/.pnp*
-/.eslintcache
-/coverage/
-/npm-debug.log*
-/testem.log
-/yarn-error.log
+/cypress/videos/
+/cypress/screenshots/
 
-# ember-try
-/.node_modules.ember-try/
-/npm-shrinkwrap.json.ember-try
-/package.json.ember-try
-/package-lock.json.ember-try
-/yarn.lock.ember-try
-
-# broccoli-debug
-/DEBUG/
-
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 .idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Yarn v2
-.pnp.cjs
-.pnp.loader.mjs
-.yarn-debug.log*
-.yarn-error.log*
+*.tsbuildinfo
+
+test-results/
+playwright-report/

@@ -1,56 +1,64 @@
-# my-typescript-app
+# vue-project
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Prerequisites
+## Recommended IDE Setup
 
-You will need the following things properly installed on your computer.
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (with npm)
-- [Ember CLI](https://cli.emberjs.com/release/)
-- [Google Chrome](https://google.com/chrome/)
+## Type Support for `.vue` Imports in TS
 
-## Installation
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-- `git clone <repository-url>` this repository
-- `cd my-typescript-app`
-- `npm install`
+## Customize configuration
 
-## Running / Development
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-- `npm run start`
-- Visit your app at [http://localhost:4200](http://localhost:4200).
-- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+## Project Setup
 
-### Code Generators
+```sh
+yarn
+```
 
-Make use of the many generators for code, try `ember help generate` for more details
+### Compile and Hot-Reload for Development
 
-### Running Tests
+```sh
+yarn dev
+```
 
-- `npm run test`
-- `npm run test:ember -- --server`
+### Type-Check, Compile and Minify for Production
 
-### Linting
+```sh
+yarn build
+```
 
-- `npm run lint`
-- `npm run lint:fix`
+### Run Unit Tests with [Vitest](https://vitest.dev/)
 
-### Building
+```sh
+yarn test:unit
+```
 
-- `npm exec ember build` (development)
-- `npm run build` (production)
+### Run End-to-End Tests with [Playwright](https://playwright.dev)
 
-### Deploying
+```sh
+# Install browsers for the first run
+npx playwright install
 
-Specify what it takes to deploy your app.
+# When testing on CI, must build the project first
+yarn build
 
-## Further Reading / Useful Links
+# Runs the end-to-end tests
+yarn test:e2e
+# Runs the tests only on Chromium
+yarn test:e2e --project=chromium
+# Runs the tests of a specific file
+yarn test:e2e tests/example.spec.ts
+# Runs the tests in debug mode
+yarn test:e2e --debug
+```
 
-- [ember.js](https://emberjs.com/)
-- [ember-cli](https://cli.emberjs.com/release/)
-- Development Browser Extensions
-  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+yarn lint
+```
