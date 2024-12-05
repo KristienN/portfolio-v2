@@ -23,7 +23,7 @@ export default class Header extends Component<HeaderSignature> {
   }
 
   @action
-  fadeIn(element) {
+  fadeIn(element: Element) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -37,7 +37,7 @@ export default class Header extends Component<HeaderSignature> {
   }
 
   @action
-  fadeInTop(element) {
+  fadeInTop(element: Element) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

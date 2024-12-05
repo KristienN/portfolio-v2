@@ -9,18 +9,7 @@ module('Integration | Component | sample-work', function (hooks) {
   test('it renders', async function (assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<SampleWork />`);
-
-    assert.dom().hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <SampleWork>
-        template block text
-      </SampleWork>
-    `);
-
-    assert.dom().hasText('template block text');
+    assert.dom().containsText('Samples of My Work');
   });
 });
