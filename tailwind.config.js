@@ -1,9 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-/* eslint-env node */
-module.exports = {
-  content: ['./app/**/*.{gjs,gts,hbs,html,js,ts}'],
+// tailwind.config.js
+
+export default {
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
   },
+  variants: {
+    extend: {},
+  },
   plugins: [],
-};
+}

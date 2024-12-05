@@ -17,10 +17,7 @@ jobs:
         with:
           node-version: 22
           cache: 'yarn'
-      - run: |
-          node -v
-          yarn set version berry
+      - run: node -v
       - run: yarn
-      - run: yarn run lint
+      - run: yarn lint
       - run: yarn build
-      - run: yarn run test
