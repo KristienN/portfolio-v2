@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-row justify-center h-96 w-4/5 border shadow-xl rounded-l-lg mt-2">
+  <div
+    class="flex flex-row justify-center h-96 w-4/5 border shadow-xl rounded-l-xl mt-2 transition ease-in-out duration-1000 hover:scale-125"
+  >
     <ul class="flex flex-col items-center w-96 h-full">
       <li
         v-for="(step, index) in job.steps"
@@ -18,7 +20,7 @@
         </p>
       </li>
     </ul>
-    <div class="w-full h-full bg-black text-white px-5 pt-5 rounded-r-lg">
+    <div class="w-full h-full bg-black text-white px-5 pt-5 rounded-r-xl w-[40vw]">
       <code>
         <ul>
           <li v-for="(sj, index) in job.description" v-bind:key="index">

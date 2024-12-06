@@ -1,11 +1,22 @@
 <template>
-  <div class="flex flex-col mx-auto min-h-screen min-w-scren font-lovelace">
-    <p class="text-7xl mb-10 text-center">Career Highlights</p>
-    <ul class="flex justify-center mt-8 w-full h-auto">
-      <li v-for="highlight in highlights" :key="highlight.id">
-        <HighlightItem :highlight="highlight" />
-      </li>
-    </ul>
+  <div class="relative">
+    <div class="wave-element"></div>
+    <div
+      id="see-more"
+      class="snap-center flex flex-col mx-auto min-h-screen min-w-screen bg-green-400"
+    >
+      <p
+        v-motion-pop-visible
+        class="lg:text-7xl text-3xl mb-10 text-center mt-72 text-white font-bold"
+      >
+        Career Highlights
+      </p>
+      <ul class="flex flex-col lg:flex-row justify-center items-center mt-8 w-full h-auto">
+        <li v-for="highlight in highlights" :key="highlight.id" v-motion-slide-visible-left>
+          <HighlightItem :highlight="highlight" />
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -58,3 +69,14 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.wave-element {
+  background: url('@/components/waves/wave-2.svg');
+  aspect-ratio: 1920/300;
+  object-fit: cover;
+  z-index: -1;
+  height: 300px;
+  width: 100%;
+}
+</style>
