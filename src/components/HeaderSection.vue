@@ -25,21 +25,11 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue'
 import BouncingArrowIcon from '@/components/icons/BouncingArrowIcon.vue'
-import GithubIcon from '@/components/icons/GithubIcon.vue'
-import LinkedinIcon from '@/components/icons/LinkedinIcon.vue'
-import EmailIcon from '@/components/icons/EmailIcon.vue'
-import InstagramIcon from '@/components/icons/InstagramIcon.vue'
-import FloatingProfile from '@/components/FloatingProfile.vue'
 
 export default defineComponent({
   name: 'HeaderSection',
   components: {
-    FloatingProfile,
-    GithubIcon,
     BouncingArrowIcon,
-    LinkedinIcon,
-    EmailIcon,
-    InstagramIcon,
   },
   setup() {
     const title = ref('Frontend')

@@ -73,8 +73,8 @@ export default defineComponent({
         img: luskEngineering,
       },
     ] as Project[]
-    let selectedProject = ref<Project>(projects[0])
-    let index = ref<number>(0)
+    const selectedProject = ref<Project>(projects[0])
+    const index = ref<number>(0)
 
     const nextProject = (): void => {
       index.value = index.value > 0 ? 0 : 1
