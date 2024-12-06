@@ -1,11 +1,15 @@
 <template>
-  <div class="min-h-screen max-w-screen flex flex-col m-4 p-12 items-center justify-center">
-    <p class="text-5xl text-center mt-6 p-6">More Than Just Frontend & Backend...</p>
-    <p class="text-2xl text-center mb-12 p-6 w-1/2">
+  <div
+    class="min-h-screen max-w-screen flex flex-col m-4 p-12 items-center justify-center snap-center pt-48"
+  >
+    <p v-motion-pop-visible class="lg:text-5xl text-3xl text-center mt-6 p-6">
+      More Than Just Frontend & Backend...
+    </p>
+    <p class="lg:text-2xl text-xl text-center mb-12 p-6 lg:w-1/2">
       I also have valuable experience deploying applications using a whole host of technologies &
       infrastructure.
     </p>
-    <ul class="flex flex-row">
+    <ul class="hidden lg:flex flex-row mb-10">
       <li v-for="job in jobs" :key="job.id">
         <JobItem
           :isSelected="selectedJob.name === job.name"
@@ -15,7 +19,7 @@
         />
       </li>
     </ul>
-    <div class="flex m-4 p-6 justify-center">
+    <div class="hidden lg:flex m-4 p-6 justify-center">
       <StepViewer :job="selectedJob" :time="time" />
     </div>
   </div>
@@ -55,7 +59,7 @@ export default defineComponent({
     const selectedJob = ref<Job>(landingJob)
 
     const selectJob = (job: Job): void => {
-      selectedJob.value = job
+      selectedJob.value = selectedJob.value.name === job.name ? landingJob : job
     }
 
     const seconds = ref<number>(0)

@@ -1,7 +1,10 @@
 <template>
-  <div class="min-h-screen min-w-screen p-12 flex flex-col items-center">
-    <p class="text-7xl text-center">I'm Not Afraid of Frameworks</p>
-    <p class="text-2xl text-center w-1/3 m-10">
+  <div class="wave-element"></div>
+  <div class="min-h-screen min-w-screen p-12 flex flex-col items-center snap-center pt-56">
+    <p v-motion-pop-visible class="lg:text-7xl text-3xl text-center mt-6">
+      I'm Not Afraid of Frameworks
+    </p>
+    <p class="lg:text-2xl text-lg text-center lg:w-1/3 m-10">
       Versatile in code and fearless with new languages & frameworks—if there’s syntax, I’ll master
       it!
     </p>
@@ -113,3 +116,14 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.wave-element {
+  background: url('@/components/waves/wave-3.svg');
+  aspect-ratio: 1920/300;
+  object-fit: cover;
+  z-index: -1;
+  height: 300px;
+  width: 100%;
+}
+</style>

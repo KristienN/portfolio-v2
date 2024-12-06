@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`group/items m-2 h-56 w-72 relative shadow-md border rounded-lg flex justify-center items-center transition-all duration-300 ease-in-out ${framework.effect}`"
+    :class="`group/items m-2 h-20 w-24 lg:h-36 lg:w-52 relative shadow-md border rounded-lg flex justify-center items-center transition-all duration-300 ease-in-out ${framework.effect}`"
   >
     <div
       class="h-full w-full group-hover/items:opacity-10 hover:bg-gray-200 flex justify-center items-center transition-all duration-300 ease-in-out"

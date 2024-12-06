@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="animate-bounce mt-5 size-10"
+    class="animate-bounce mt-5 size-20"
     fill="none"
     stroke="currentColor"
     stroke-width="1.5"
