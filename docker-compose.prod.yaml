@@ -1,5 +1,4 @@
 services:
-
   app:
     container_name: portfolio-1
     image: "registry.digitalocean.com/kristien-docr/portfolio-v2:latest"
@@ -9,7 +8,7 @@ services:
 
   replica-app:
     container_name: portfolio-2
-    build: "registry.digitalocean.com/kristien-docr/portfolio-v2:latest"
+    image: "registry.digitalocean.com/kristien-docr/portfolio-v2:latest"
     ports:
       - "8002:80"
     restart: on-failure
@@ -24,3 +23,5 @@ services:
       - app
       - replica-app
     restart: on-failure
+    volumes:
+      - /etc/letsencrypt/live/www.kristiennyamutsaka.com:/etc/letsencrypt

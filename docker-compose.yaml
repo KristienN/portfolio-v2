@@ -1,5 +1,4 @@
 services:
-
   app:
     container_name: portfolio-1
     build: .
@@ -16,7 +15,7 @@ services:
 
   ngx-reverse-proxy-lb:
     container_name: ngx-reverse-proxy-lb
-    build: ./nginx
+    build: ./nginx/dev
     ports:
       - "80:80"
       - "443:443"
@@ -24,3 +23,5 @@ services:
       - app
       - replica-app
     restart: on-failure
+    volumes:
+      - /c/Users/kristien/nginx/certs:/nginx/certs:ro
