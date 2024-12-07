@@ -1,14 +1,8 @@
 <template>
   <div class="relative">
     <div class="wave-element"></div>
-    <div
-      id="see-more"
-      class="snap-center flex flex-col mx-auto min-h-screen min-w-screen bg-green-400"
-    >
-      <p
-        v-motion-pop-visible
-        class="lg:text-7xl text-3xl mb-10 text-center mt-72 text-white font-bold"
-      >
+    <div id="see-more" class="snap-center flex flex-col mx-auto min-h-screen min-w-screen relative">
+      <p v-motion-pop-visible class="lg:text-7xl text-5xl mb-10 text-center mt-64 font-bold">
         Career Highlights
       </p>
       <ul class="flex flex-col lg:flex-row justify-center items-center mt-8 w-full h-auto">
@@ -16,6 +10,7 @@
           <HighlightItem :highlight="highlight" />
         </li>
       </ul>
+      <div class="wave-element-2 absolute bottom-0"></div>
     </div>
   </div>
 </template>
@@ -77,6 +72,15 @@ export default defineComponent({
   object-fit: cover;
   z-index: -1;
   height: 300px;
+  width: 100%;
+}
+
+.wave-element-2 {
+  background: url('@/components/waves/wave-3.svg');
+  aspect-ratio: 1920/1080;
+  object-fit: cover;
+  z-index: -1;
+  height: 100%;
   width: 100%;
 }
 </style>

@@ -20,7 +20,7 @@
         </p>
       </li>
     </ul>
-    <div class="w-full h-full bg-black text-white px-5 pt-5 rounded-r-xl w-[40vw]">
+    <div class="h-full bg-black text-white px-5 pt-5 rounded-r-xl w-[40vw]">
       <code>
         <ul>
           <li v-for="(sj, index) in job.description" v-bind:key="index">

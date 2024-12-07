@@ -1,10 +1,13 @@
 <template>
-  <div class="min-h-screen min-w-screen flex flex-col justify-center items-center lg:snap-center">
-    <p v-motion-pop-visible class="text-5xl mb-12">Projects</p>
+  <div class="wave-element-2"></div>
+  <div
+    class="relative min-h-screen min-w-screen flex flex-col justify-center items-center lg:snap-center"
+  >
+    <p v-motion-pop-visible class="text-5xl mb-12 text-white">Projects</p>
     <div class="flex flex-col lg:flex-row justify-center items-center w-full h-full">
       <div class="w-[90vw] mb-5 lg:w-1/3 h-96 flex flex-col justify-center items-center">
         <div
-          class="flex justify-center items-center w-32 h-10 mb-6 hover:scale-90 hover:border-2 hover:bg-red-300 cursor-pointer bg-blue-300 text-white transition ease-in-out duration-300 rounded-xl shadow-sm text-center"
+          class="flex justify-center items-center w-32 h-10 mb-6 hover:scale-90 hover:border-2 hover:bg-red-300 cursor-pointer bg-orange-300 text-white transition ease-in-out duration-300 rounded-xl shadow-sm text-center"
           @click="nextProject"
         >
           Next Project
@@ -38,6 +41,7 @@
         </div>
       </div>
     </div>
+    <div class="wave-element absolute top-0"></div>
   </div>
 </template>
 
@@ -85,3 +89,23 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.wave-element {
+  background: url('@/components/waves/wave-7.svg');
+  aspect-ratio: 1920/1080;
+  object-fit: cover;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.wave-element-2 {
+  background: url('@/components/waves/wave-8.svg');
+  aspect-ratio: 1920/300;
+  object-fit: cover;
+  z-index: -1;
+  height: 200px;
+  width: 100%;
+}
+</style>

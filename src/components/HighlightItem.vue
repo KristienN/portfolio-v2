@@ -14,14 +14,14 @@
     </div>
 
     <div class="w-full h-auto relative my-10">
-      <div class="h-1 w-full bg-white z-0"></div>
+      <div class="h-1 w-full bg-black z-0"></div>
       <div
         class="absolute border-2 bg-orange-300 rounded-full h-5 w-5 z-5 mx-auto inset-x-5 -top-2"
       ></div>
     </div>
 
     <div
-      class="flex flex-col w-64 bg-orange-600 text-white p-4 items-center self-center rounded-lg shadow-sm mb-20 lg:mb-0"
+      class="flex flex-col w-64 bg-blue-600 text-white p-4 items-center self-center rounded-lg shadow-sm mb-20 lg:mb-0"
     >
       <p class="font-bold text-md">{{ highlight.dates }}</p>
       <p class="font-italic text-md">{{ highlight.locations }}</p>

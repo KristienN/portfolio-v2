@@ -1,15 +1,16 @@
 <template>
+  <div class="wave-element"></div>
   <div
     class="min-h-screen max-w-screen flex flex-col m-4 p-12 items-center justify-center snap-center pt-48"
   >
-    <p v-motion-pop-visible class="lg:text-5xl text-3xl text-center mt-6 p-6">
+    <p v-motion-pop-visible class="md:text-5xl text-4xl text-center mt-6 md:p-6">
       More Than Just Frontend & Backend...
     </p>
-    <p class="lg:text-2xl text-xl text-center mb-12 p-6 lg:w-1/2">
+    <p class="lg:text-2xl text-xl text-center mb-12 md:p-6 p-3 lg:w-1/2">
       I also have valuable experience deploying applications using a whole host of technologies &
       infrastructure.
     </p>
-    <ul class="hidden lg:flex flex-row mb-10">
+    <ul class="flex flex-row mb-10 md:justify-center items-center">
       <li v-for="job in jobs" :key="job.id">
         <JobItem
           :isSelected="selectedJob.name === job.name"
@@ -303,3 +304,14 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.wave-element {
+  background: url('@/components/waves/wave-5.svg');
+  aspect-ratio: 1920/300;
+  object-fit: cover;
+  z-index: -1;
+  height: 300px;
+  width: 100%;
+}
+</style>
