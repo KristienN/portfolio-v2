@@ -33,5 +33,5 @@ jobs:
       - name: publish nginx-lb
         run: |
           docker build -t portfolio-v2-nlb-proxy ./nginx
-          docker tag portfolio-v2 $REGISTRY_NAME/portfolio-v2-nlb-proxy:latest
+          docker tag portfolio-v2-nlb-proxy $REGISTRY_NAME/portfolio-v2-nlb-proxy:latest
           docker push $REGISTRY_NAME/portfolio-v2-nlb-proxy:latest

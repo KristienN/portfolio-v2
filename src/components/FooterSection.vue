@@ -6,7 +6,6 @@
       Hope you have a very happy {{ currentDay }}!
     </p>
     <p class="mt-36">© Kristien Nyamutsaka 2024</p>
-    <div class="absolute wave-element"></div>
   </div>
 </template>
 <script lang="ts">

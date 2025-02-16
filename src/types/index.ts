@@ -1,4 +1,4 @@
-export type { Highlight } from './Highlight'
-export type { Framework } from './Framework'
-export type { Job } from './Job'
-export type { Project } from './Project'
+export type { Preview } from './Preview'
+export type { Statistic } from './Stastic'
+export type { Career } from './Career'
+export type { Tool } from './Tool'
