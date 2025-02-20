@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Cabin', sans-serif;
-    src: url("@/assets/Cabin-Regular.ttf") format("truetype");
-
-}
-
-html, body {
-    font: 400 14px "Cabin", sans-serif;
-}

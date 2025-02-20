@@ -24,4 +24,4 @@ services:
       - replica-app
     restart: on-failure
     volumes:
-      - /etc/letsencrypt/live/www.kristiennyamutsaka.com:/etc/letsencrypt
+      - /etc/letsencrypt/archive/www.kristiennyamutsaka.com:/etc/letsencrypt/certs:ro
