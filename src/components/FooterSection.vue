@@ -1,13 +1,15 @@
 <template>
-  <div
-    class="relative snap-center font-lovelace min-h-screen min-w-screen flex flex-col justify-center items-center text-white"
-  >
-    <p v-motion-slide-visible-bottom class="lg:text-7xl text-4xl w-1/2 text-center mt-20">
-      Hope you have a very happy {{ currentDay }}!
-    </p>
-    <p class="mt-36">© Kristien Nyamutsaka 2024</p>
+  <div class="px-16 xl:px-32 flex flex-col justify-center items-center my-64">
+    <div class="preview-block-3 w-full h-full text-white rounded-2xl">
+      <p v-motion-slide-visible-bottom class="lg:text-7xl text-4xl text-center my-20">
+        Hope you have a very happy {{ currentDay }}!
+      </p>
+    </div>
+
+    <p class="mt-36 text-lg">© Kristien Nyamutsaka 2024</p>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 
@@ -25,11 +27,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.wave-element {
-  z-index: -1;
-  aspect-ratio: 1920/1080;
-  background: url('@/components/waves/wave-6.svg') no-repeat;
+.preview-block-3 {
+  background: url('@/assets/svg/gradient-3.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   object-fit: cover;
-  height: 1080px;
 }
 </style>

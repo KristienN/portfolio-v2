@@ -1,64 +1,49 @@
 <template>
-  <div></div>
+  <div v-motion-slide-visible-bottom class="px-16 xl:px-32 mt-32">
+    <p class="text-8xl font-bold mb-12 text-center xl:text-left">RECENT PROJECTS</p>
+    <div class="flex flex-col">
+      <div v-for="p in projects" :key="p.id"><ProjectCard :project="p" /></div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import type { Project } from '@/types'
-import sentenceDiagramming from '@/assets/sentence-diagramming-ui.png'
-import luskEngineering from '@/assets/lusk-engineering.png'
+import ProjectCard from './ProjectElements/ProjectCard.vue'
+import middlemanLogo from '@/assets/img/middleman.png'
+import luskLogo from '@/assets/img/lusk.png'
+import sduiLogo from '@/assets/img/sdui.png'
 
 export default defineComponent({
   name: 'ProjectsSection',
-  components: {},
-  setup() {
-    const projects = [
-      {
-        id: 1,
-        name: 'Sentence Diagramming UI',
-        description: 'This is a tool that I developed for my undergraduate final year project.',
-        tools: ['Typescript', 'React', 'NodeJS', 'Express'],
-        url: 'https://sentence-diagramming-ui.vercel.app/',
-        img: sentenceDiagramming,
-      },
-      {
-        id: 2,
-        name: 'Lusk Engineering',
-        description: 'This is a tool that I developed for my undergraduate final year project,',
-        tools: ['Typescript', 'React', 'NodeJS', 'Express'],
-        url: 'https://lusk-engineering.com',
-        img: luskEngineering,
-      },
-    ] as Project[]
-    const selectedProject = ref<Project>(projects[0])
-    const index = ref<number>(0)
-
-    const nextProject = (): void => {
-      index.value = index.value > 0 ? 0 : 1
-      selectedProject.value = projects[index.value]
+  components: { ProjectCard },
+  data() {
+    return {
+      projects: [
+        {
+          id: 1,
+          name: 'Sentence Diagramming UI',
+          desc: 'Learning Tool developed for my undergraduate final year project.',
+          url: 'https://sentence-diagramming-ui.vercel.app/',
+          img: sduiLogo,
+        },
+        {
+          id: 2,
+          name: 'Lusk Engineering',
+          desc: 'Main website for Lusk Engineering',
+          url: 'https://lusk-engineering.com',
+          img: luskLogo,
+        },
+        {
+          id: 3,
+          name: 'Middleman Africa',
+          desc: 'Static demo site for Middleman Deliveries',
+          url: 'https://static.middlemanafrica.com/',
+          img: middlemanLogo,
+        },
+      ] as Project[],
     }
-
-    return { selectedProject, nextProject }
   },
 })
 </script>
-
-<style scoped>
-.wave-element {
-  background: url('@/components/waves/wave-7.svg');
-  aspect-ratio: 1920/1080;
-  object-fit: cover;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-}
-
-.wave-element-2 {
-  background: url('@/components/waves/wave-8.svg');
-  aspect-ratio: 1920/300;
-  object-fit: cover;
-  z-index: -1;
-  height: 200px;
-  width: 100%;
-}
-</style>

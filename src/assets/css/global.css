@@ -1,9 +1,5 @@
-@font-face {
-    font-family: 'Cabin', sans-serif;
-    src: url("@/assets/Cabin-Regular.ttf") format("truetype");
-
-}
-
-html, body {
-    font: 400 14px "Cabin", sans-serif;
+html,
+body {
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: #f0f0f0;
 }

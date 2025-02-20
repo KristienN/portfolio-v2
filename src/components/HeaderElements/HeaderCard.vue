@@ -1,7 +1,7 @@
 <template>
-  <div class="px-36">
-    <p class="text-9xl font-bold">{{ title }} ENGINEER</p>
-    <p class="text-2xl w-3/4 py-5">
+  <div class="xl:px-36 flex flex-col justify-center items-center">
+    <p class="text-8xl xl:text-9xl font-bold text-center xl:text-left">{{ title }} ENGINEER</p>
+    <p class="text-2xl xl:text-xl py-5 text-gray-500 text-center xl:text-left">
       Passionate about creating intuitive and engaging user experiences. Specialize in transforming
       ideas into beautifully crafted products.
     </p>
@@ -11,8 +11,7 @@
       </div>
     </div>
     <div class="flex">
-      <PreviewBlock />
-      <PreviewBlock />
+      <div v-for="p in previews" :key="p.id"><PreviewBlock :preview="p" /></div>
     </div>
   </div>
 </template>
@@ -20,7 +19,7 @@
 import { defineComponent, onMounted, ref } from 'vue'
 import StatisticBlock from './StatisticBlock.vue'
 import PreviewBlock from './PreviewBlock.vue'
-import type { Statistic } from '@/types'
+import type { Preview, Statistic } from '@/types'
 
 export default defineComponent({
   name: 'HeaderCard',
@@ -55,7 +54,7 @@ export default defineComponent({
         },
         {
           id: 1,
-          num: 9,
+          num: 8,
           subtitle: 'FRAMEWORKS UTILIZED',
         },
         {
@@ -64,6 +63,22 @@ export default defineComponent({
           subtitle: 'PROJECTS COMPLETED',
         },
       ] as Statistic[],
+      previews: [
+        {
+          id: 3,
+          icon: 'cloud',
+          text: 'Building cloud-driven app architectures',
+          svgPath: 'gradient-1',
+          link: '#solutions',
+        },
+        {
+          id: 3,
+          icon: 'stack',
+          text: 'Versatility with frameworks and tools',
+          svgPath: 'gradient-2',
+          link: '#skills',
+        },
+      ] as Preview[],
     }
   },
 })

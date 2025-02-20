@@ -13,7 +13,7 @@ export default defineComponent({
 
 <template>
   <div
-    class="sticky top-10 flex flex-col items-center border border-black w-1/4 h-[700px] rounded-2xl bg-black text-white px-12 shadow-lg z-10"
+    class="hidden sticky top-10 xl:flex flex-col items-center border border-black w-1/4 h-[700px] rounded-2xl bg-black text-white px-12 shadow-lg z-10"
   >
     <div class="my-12 rounded-2xl">
       <img
@@ -22,22 +22,22 @@ export default defineComponent({
         style="object-fit: cover"
       />
     </div>
-    <p class="text-5xl pt-2 pb-32 font-bold text-center">Kristien Nyamutsaka</p>
-    <p class="text-xl text-center">
+    <p class="text-3xl pt-1 pb-12 font-bold text-center">Kristien Nyamutsaka</p>
+    <p class="text-sm text-center">
       A Software Engineeer who has vast experience across multiple fields
     </p>
     <ul class="flex items-center justify-center pt-8">
-      <li class="p-3">
-        <InstagramIcon />
+      <li class="p-3 hover:scale-110 duration-500 ease-in-out">
+        <a href="https://www.instagram.com/kristiennyamutsaka/"><InstagramIcon /></a>
       </li>
-      <li class="p-3">
-        <LinkedinIcon />
+      <li class="p-3 hover:scale-110 duration-500 ease-in-out">
+        <a href="https://www.linkedin.com/in/kristien-nyamutsaka/"><LinkedinIcon /></a>
       </li>
-      <li class="p-3">
-        <EmailIcon />
+      <li class="p-3 hover:scale-110 duration-500 ease-in-out">
+        <a href="knyamutsaka@outlook.com"><EmailIcon /></a>
       </li>
-      <li class="p-3">
-        <GithubIcon />
+      <li class="p-3 hover:scale-110 duration-500 ease-in-out">
+        <a href="https://github.com/KristienN"><GithubIcon /></a>
       </li>
     </ul>
   </div>

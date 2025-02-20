@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col p-6">
     <p class="text-8xl font-bold">+{{ statistic.num }}</p>
-    <p class="w-36 text-xl">{{ statistic.subtitle }}</p>
+    <p class="w-36 text-xl text-gray-400">{{ statistic.subtitle }}</p>
   </div>
 </template>
 <script lang="ts">

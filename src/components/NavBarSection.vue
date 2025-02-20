@@ -1,20 +1,20 @@
 <template>
-  <div class="flex w-full justify-center py-6 mb-12 mt-4">
+  <div class="flex w-full justify-center py-6 mb-2 mt-2">
     <ul class="flex">
       <li class="p-5">
-        <HomeIcon />
+        <a href="#"><HomeIcon /></a>
       </li>
       <li class="p-5">
-        <WorkIcon />
+        <a href="#career"><WorkIcon /></a>
       </li>
       <li class="p-5">
-        <ToolsIcon />
+        <a href="#skills"><ToolsIcon /></a>
       </li>
       <li class="p-5">
-        <ProjectsIcon />
+        <a href="#projects"><ProjectsIcon /></a>
       </li>
       <li class="p-5">
-        <ChatIcon />
+        <a href=""><ChatIcon /></a>
       </li>
     </ul>
   </div>
@@ -28,7 +28,7 @@ import ProjectsIcon from './icons/ProjectsIcon.vue'
 import ChatIcon from './icons/ChatIcon.vue'
 
 export default defineComponent({
-  name: 'NavBar',
+  name: 'NavBarSection',
   components: { HomeIcon, WorkIcon, ToolsIcon, ProjectsIcon, ChatIcon },
 })
 </script>
